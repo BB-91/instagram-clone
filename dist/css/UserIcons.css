@@ -1,0 +1,9 @@
+.user-icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}/*# sourceMappingURL=UserIcons.css.map */

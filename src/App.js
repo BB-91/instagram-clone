@@ -3,24 +3,31 @@ import './App.scss';
 import ImageGallery from './containers/ImageGallery/ImageGallery';
 import userObj from './data/userObj.mjs';
 import UserStats from './components/UserStats/UserStats';
+import UserIcons from './components/UserIcons/UserIcons';
+
+let userIndex = 0;
+let user = Object.values(userObj)[userIndex];
+let userName = Object.keys(userObj)[userIndex];
+
+
 
 // let user = userObj.Bill;
-let user = userObj.John;
+// let user = userObj.John;
 // let user = userObj.Steve;
-
-// const imageNames = [];
-// for (let i = 0; i < 7; i++) {
-//     const imageName = `cat${i + 1}.jpg`;
-//     imageNames.push(imageName);
-// }
 
 const imagePaths = [];
 for (let i = 0; i < 7; i++) {
-    const path = `images/cat${i+1}.jpg`;
+    const path = `user/${userName}/images/cat${i+1}.jpg`;
     imagePaths.push(path);
 }
 
-const iconPaths = ['grid', 'play', 'user', 'video'].map(name => `icons/${name}.png`);
+// const imagePaths = [];
+// for (let i = 0; i < 7; i++) {
+//     const path = `images/cat${i+1}.jpg`;
+//     imagePaths.push(path);
+// }
+
+// const iconPaths = ['grid', 'play', 'user', 'video'].map(name => `icons/${name}.png`);
 // const iconPaths = ['grid', 'play', 'user', 'video'];
 
 function App() {
@@ -87,12 +94,12 @@ function App() {
     //     // return iconElements;
     // }
 
-    const getIconElements = () => {
-        const iconElements = iconPaths.map((path, index) => {
-            return <img className='icon' src={path} alt='grid' key={index}></img>
-        })
-        return iconElements;
-    }
+    // const getIconElements = () => {
+    //     const iconElements = iconPaths.map((path, index) => {
+    //         return <img className='icon' src={path} alt='grid' key={index}></img>
+    //     })
+    //     return iconElements;
+    // }
 
     return (
         <div className="App">
@@ -103,14 +110,15 @@ function App() {
                 {/* <div className='img-div' style={{ backgroundImage: `url(${imagePath})`}} key={index}></div> */}
 
                 <UserStats user={user}/>
+                <UserIcons />
 
                 {/* <div className='stats-row'>
                     {getStatsElements()}
                 </div> */}
 
-                <div className='icon-row'>
+                {/* <div className='icon-row'>
                     {getIconElements()}
-                </div>
+                </div> */}
 
                 {/* <div>
                     <img className='icon' src='icons/grid.png' alt='grid'></img>

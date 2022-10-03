@@ -9,21 +9,6 @@
   row-gap: 0.1rem;
 }
 
-.icon {
-  width: 40px;
-  height: 40px;
-}
-
-.icon-row,
-.stats-row {
-  display: flex;
-  justify-content: space-around;
-}
-
-.stats-column {
-  text-align: center;
-}
-
 h4 {
   color: rgb(174, 174, 174);
 }
