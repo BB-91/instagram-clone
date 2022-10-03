@@ -1,0 +1,8 @@
+.user-stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stats-column {
+  text-align: center;
+}/*# sourceMappingURL=UserStats.css.map */
