@@ -4,7 +4,13 @@ import "./ImageGallery.scss";
 
 
 const ImageGallery = (props) => {
-    const { imagePaths } = props;
+    const { userName } = props;
+
+    const imagePaths = [];
+    for (let i = 0; i < 7; i++) {
+        const path = `user/${userName}/images/cat${i + 1}.jpg`;
+        imagePaths.push(path);
+    }
 
     const imageElements = imagePaths.map((imagePath, index) => {
         // const imagePath = `/images/${imageName}`;

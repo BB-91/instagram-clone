@@ -46,8 +46,7 @@ const UserStats = (props) => {
             }
 
             return (
-                <div className='stats-column'>
-                    {/* <h3>{value}</h3> */}
+                <div className='stats-column' key={index}>
                     <h3>{formattedValue}</h3>
                     <h4>{key}</h4>
                 </div>
