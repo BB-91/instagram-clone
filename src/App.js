@@ -1,9 +1,5 @@
-import logo from './logo.svg';
 import './App.scss';
-import ImageGallery from './containers/ImageGallery/ImageGallery';
 import userObj from './data/userObj.mjs';
-import UserStats from './components/UserStats/UserStats';
-import UserIcons from './components/UserIcons/UserIcons';
 import UserFeed from './containers/UserFeed/UserFeed';
 
 let userIndex = 0;

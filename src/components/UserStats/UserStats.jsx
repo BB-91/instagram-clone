@@ -5,7 +5,8 @@ const UserStats = (props) => {
     const { user } = props;
 
     const getStatsElements = () => {
-        const keys = Object.keys(user);
+        // const keys = Object.keys(user);
+        const keys =  ['posts', 'followers', 'following'];
         const statElements = keys.map((key, index) => {
             const value = user[key];
             const valueStr = String(value);
